@@ -1,0 +1,65 @@
+<html>
+    <head>
+    <title>Form</title>
+	<script>
+	function cal(){
+	var chk=document.getElementById("gold");
+	var chk2=document.getElementById("T").value;
+	var x=parseInt(chk2);
+	if(chk.checked){
+	var y=x*300;
+	alert("the cost of tkt"+y);
+	}
+	var chk1=document.getElementById("silver");
+	if(chk1.checked){
+	var z=x*200;
+	alert("the cost of tkt"+z);
+	}
+	}
+	</script>
+    </head>
+    <body>
+	<center>
+	<h2>Movie Palace</h2>
+        <form name="form1" method="post" enctype="type" action=>
+		<table border="1"  style=border-collapse:collapse>
+		    <tr>
+			<th>Customer Name:</th>
+			<td>
+		    <input type="text" name="name" pattern="[A-Za-z]{5,}" required>
+			</td>
+			</tr>
+			<tr>
+			<th>Mobile Number:</th>
+			<td>
+		    <input type="text" name="number" pattern="[0-9]{10}" required>
+			</td>
+			</tr>
+			<tr>
+			<th>Email Id:</th>
+			<td>
+			<input id="email" name="email" value=" ">
+			</td>
+			</tr>
+			<tr>
+			<th>Class:</th>
+			<td>
+			<input id="gold" type="radio" name="graduation" value="gold" required>Gold
+			<input id="silver" type="radio" name="graduation" value="silver">Silver
+			</td>
+			</tr>
+			<tr>
+			<th>Number of tickets:</th>
+			<td>
+			<input id="T" type="number" name="tickets" min="0" max="10" required>
+			</td>
+			</tr>
+			<tr>
+			<td colspan="3" align="center">
+			<input type="submit" value="Book" onClick="cal();">
+			</td>
+		</table>
+		</form>
+	</center>
+	</body>
+</html>
